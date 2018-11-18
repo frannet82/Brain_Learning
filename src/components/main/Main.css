@@ -1,0 +1,131 @@
+.mainDiv {
+    width: 18.75em;
+    height: 18.75em;
+    margin: 10.5em auto;
+    perspective: 800px;
+}
+
+.boxDiv {
+    width: 18.75em;   
+    transform-style: preserve-3d; 
+    animation: rotate 25s linear infinite;
+}
+
+.boxDiv div {
+    position: absolute;
+    width: 18.75em;
+    height: 18.75em;
+    opacity: 1;
+    animation: colorch 15s linear infinite;
+    color: white;
+}
+
+.front {
+    transform: translateZ(9.375em);
+    background-image: url(./brain2.gif);
+    background-position: center;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+
+}
+
+
+.back {
+    transform: rotateY(180deg) translateZ(9.375em);
+    background-image: url(./brain3.gif);
+    background-position: center;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;    
+}
+
+.left {
+    transform: rotateY(-90deg) translateX(-9.375em);
+    transform-origin: left;
+    background-image: url(./brain4.gif);
+    background-position: center;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;    
+}
+
+.right {
+    transform: rotateY(90deg) translateX(9.375em);
+    transform-origin: right; 
+    background-image: url(./brain5.gif);
+    background-position: center;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;    
+}
+
+.top {
+    transform: rotateX(-90deg) translateY(-9.375em);
+    transform-origin: top;
+    background-image: url(./brain4.gif);
+    background-position: center;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;    
+}
+
+.bottom {
+    transform: rotateX(90deg) translateY(9.375em);
+    transform-origin: bottom; 
+    background-image: url(./brain2.gif);
+    background-position: center;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;    
+}
+
+@keyframes rotate {
+    0% { transform: rotateY(0); }
+    100% { transform: rotateY(360deg); }
+}
+
+@keyframes colorch {
+    0% { background-color: rgba(129, 1, 161, 0.705); }
+    50% {background-color: rgba(161, 1, 1, 0.705);}
+    100% { background-color: rgba(44, 1, 161, 0.719); }
+}
+
+
+.animation span {
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    animation: bounce .6s ease infinite alternate;
+    font-family: 'Titan One', cursive;
+    font-size: 4.375em;
+    color: #FFF;
+    text-shadow: 0 1px 0 #CCC,
+                 0 2px 0 #CCC,
+                 0 3px 0 #CCC,
+                 0 4px 0 #CCC,
+                 0 5px 0 #CCC,
+                 0 6px 0 transparent,
+                 0 7px 0 transparent,
+                 0 8px 0 transparent,
+                 0 9px 0 transparent,
+                 0 10px 10px rgba(0, 0, 0, .4);
+  }
+  
+  .animation span:nth-child(2) { animation-delay: .2s; }
+  .animation span:nth-child(3) { animation-delay: .4s; }
+  .animation span:nth-child(4) { animation-delay: .6s; }
+  .animation span:nth-child(5) { animation-delay: .8s; }
+  .animation1 span:nth-child(6) { animation-delay: .10s; }
+  .animation span:nth-child(7) { animation-delay: .12s; }
+  .animation span:nth-child(8) { animation-delay: .14s; }
+  
+  @keyframes bounce {
+    100% {
+      top: -20px;
+      text-shadow: 0 1px 0 #CCC,
+                   0 2px 0 #CCC,
+                   0 3px 0 #CCC,
+                   0 4px 0 #CCC,
+                   0 5px 0 #CCC,
+                   0 6px 0 #CCC,
+                   0 7px 0 #CCC,
+                   0 8px 0 #CCC,
+                   0 9px 0 #CCC,
+                   0 50px 25px rgba(0, 0, 0, .2);
+    }
+  }
