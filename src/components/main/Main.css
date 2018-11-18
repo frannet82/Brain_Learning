@@ -1,20 +1,20 @@
 .mainDiv {
-    width: 18.75em;
-    height: 18.75em;
-    margin: 10.5em auto;
+    width: 18em;
+    height: 18em;
+    margin: 6.5em auto;
     perspective: 800px;
 }
 
 .boxDiv {
-    width: 18.75em;   
+    width: 18em;   
     transform-style: preserve-3d; 
     animation: rotate 25s linear infinite;
 }
 
 .boxDiv div {
     position: absolute;
-    width: 18.75em;
-    height: 18.75em;
+    width: 18em;
+    height: 18em;
     opacity: 1;
     animation: colorch 15s linear infinite;
     color: white;
@@ -92,7 +92,7 @@
     display: inline-block;
     animation: bounce .6s ease infinite alternate;
     font-family: 'Titan One', cursive;
-    font-size: 4.375em;
+    font-size: 3.375em;
     color: #FFF;
     text-shadow: 0 1px 0 #CCC,
                  0 2px 0 #CCC,
