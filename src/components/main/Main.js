@@ -6,10 +6,9 @@ const Main = () => {
     <article className="center">
         <main className="pa5">
             <div className="animation">
-                <span>Ma</span>
-                <span>chi</span>
-                <span>ne&nbsp;</span>
-                <span>lea</span>
+                <span>Bra</span>
+                <span>in&nbsp;</span>
+                <span>Lea</span>
                 <span>rn</span>
                 <span>ing</span>
             </div>

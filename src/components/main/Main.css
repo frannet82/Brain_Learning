@@ -88,7 +88,7 @@
 
 .animation span {
     position: relative;
-    top: 20px;
+    top: 18px;
     display: inline-block;
     animation: bounce .6s ease infinite alternate;
     font-family: 'Titan One', cursive;
