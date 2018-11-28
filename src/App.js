@@ -47,15 +47,31 @@ class App extends Component {
       imageUrl: '',
       box: {},
       route: 'main',
-      isSignedIn: false
+      isSignedIn: false,
+      user: {
+        id: '',
+        firstname: '',
+        lastname: '',
+        email: '',
+        entries: 0,
+        joined: ''
+
+      }
     }
   }
-/*
-  componentDidMount() {
-    fetch('http://localhost:3000/profile/123')
-    .then(response => response.json())
-    .then(data => console.log(data));
-  } */
+
+  loadUser = (data) => {
+    this.setState({user: {
+      id: data.id,
+      firstname: data.firstname,
+      lastname: data.lastname,
+      email: data.email,
+      entries: data.entries,
+      joined: data.joined
+
+    }});
+
+  }
 
   calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
@@ -123,8 +139,8 @@ class App extends Component {
               onButtonSubmit={this.onButtonSubmit} />
               <FaceRecognition box={box} image_detected={imageUrl} />
             </div>
-          : ( route === 'signin' ? <Signin onRouteChange={this.onRouteChange}/>
-          : ( route === 'register' ? <Register onRouteChange={this.onRouteChange}/>
+          : ( route === 'signin' ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
+          : ( route === 'register' ? <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
           : ( route === 'resetPassword' ? <ResetPassword  onRouteChange={this.onRouteChange} />
           : <Main  onRouteChange={this.onRouteChange} />)
           )
